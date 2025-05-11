@@ -58,10 +58,9 @@
         }
 
         .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
 
         .social-links a {
@@ -73,6 +72,7 @@
             backdrop-filter: blur(10px);
             display: flex;
             align-items: center;
+            justify-content: center;
             gap: 0.8rem;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             background: linear-gradient(135deg, #2b3137, #24292e);

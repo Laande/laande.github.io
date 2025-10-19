@@ -1,0 +1,19 @@
+{
+  "title": "ForumPulse",
+  "description": "A discord bot that keep posts in forums unarchived",
+  "category": "discord_bot",
+  "buttons": [
+    {
+      "text": "Discord app",
+      "url": "https://discord.com/discovery/applications/1290016281294012526",
+      "icon": "bxs:bot",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/laande/forumpulse",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

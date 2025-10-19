@@ -1,0 +1,19 @@
+{
+  "title": "Quote",
+  "description": "A discord bot that create gif of messages with animated texts",
+  "category": "discord_bot",
+  "buttons": [
+    {
+      "text": "Discord app",
+      "url": "https://discord.com/discovery/applications/1427680424519532584",
+      "icon": "bxs:bot",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/laande/quote",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

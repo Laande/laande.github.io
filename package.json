@@ -1,5 +1,5 @@
 {
-  "name": "lande-template",
+  "name": "lande-projects",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@iconify-json/bxs": "^1.2.2",
+    "@iconify-json/material-symbols": "^1.2.42",
     "astro": "^5.14.6",
     "astro-icon": "^1.1.5"
   },

@@ -23,18 +23,19 @@ const { title, description, buttons } = Astro.props;
     <p>{description}</p>
   </div>
   {buttons && <div class="buttons">
-    {buttons.map((button) => (
-      <a
-        href={button.url}
-        target="_blank"
-        class:list={[
-          button.variant || 'primary',
-        ]}
-      >
-        {button.icon && <Icon name={`simple-icons:${button.icon}`} size={20} />}
-        {button.text}
-      </a>
-    ))}
+    {buttons.map((button) => {
+      const iconName = button.icon && button.icon.includes(':') ? button.icon : `simple-icons:${button.icon}`;
+      return (
+        <a
+          href={button.url}
+          target="_blank"
+          class:list={[ button.variant || 'primary' ]}
+        >
+          {button.icon && <Icon name={iconName} size={20} />}
+          {button.text}
+        </a>
+      );
+    })}
   </div>}
 </div>
 
@@ -72,11 +73,11 @@ const { title, description, buttons } = Astro.props;
     gap: 0.5rem;
   }
   .primary {
-    background: #ec4899;
+    background: #970076;
     color: white;
   }
   .secondary {
-    background: #6366f1;
+    background: #5558fcc9;
     color: white;
   }
   .outline {

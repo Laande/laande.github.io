@@ -1,0 +1,25 @@
+{
+  "title": "Hab Track",
+  "description": "Track updates of Habbo and retros (badges, furnis, clothes and effects)",
+  "category": "habtrack",
+  "buttons": [
+    {
+      "text": "Website",
+      "url": "https://hab-track.vercel.app",
+      "icon": "material-symbols:bar-chart-4-bars",
+      "variant": "primary"
+    },
+    {
+      "text": "Discord",
+      "url": "https://hab-track.vercel.app/discord",
+      "icon": "discord",
+      "variant": "secondary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/hab-track",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

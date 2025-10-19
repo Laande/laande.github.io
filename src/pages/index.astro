@@ -4,26 +4,42 @@ import ProjectCard from "../components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
+
+const categoryOrder = ["habtrack", "discord_bot"];
+
+const projectsByCategory = projects.reduce((acc, project) => {
+	const category = project.data.category;
+	if (!acc[category]) {
+		acc[category] = [];
+	}
+	acc[category].push(project);
+	return acc;
+}, {} as Record<string, typeof projects>);
+
+const sortedCategories = categoryOrder
+	.filter(category => projectsByCategory[category])
+	.map(category => [category, projectsByCategory[category]] as const);
 ---
 
 <BaseLayout title="My Projects">
-	<h1>My Projects</h1>
+	<h1>Lande Projects</h1>
 	<p class="subtitle">
-		A collection of my recent work showcasing web development, design, and
-		creative solutions.
+		Stuff i've made
 	</p>
 
-	<div class="grid">
-		{
-			projects.map((p) => (
-				<ProjectCard
-					title={p.data.title}
-					description={p.data.description}
-					buttons={p.data.buttons}
-				/>
-			))
-		}
-	</div>
+	{sortedCategories.map(([category, categoryProjects]) => (
+		<div class="category-section">
+			<div class="grid">
+				{categoryProjects.map((p) => (
+					<ProjectCard
+						title={p.data.title}
+						description={p.data.description}
+						buttons={p.data.buttons}
+					/>
+				))}
+			</div>
+		</div>
+	))}
 </BaseLayout>
 
 <style>
@@ -38,11 +54,28 @@ const projects = await getCollection("projects");
 		text-align: center;
 		margin-bottom: 3rem;
 	}
+	.category-section {
+		margin-bottom: 4rem;
+	}
+	.category-section:last-child {
+		margin-bottom: 0;
+	}
+
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: 1fr;
 		gap: 1.5rem;
 		max-width: 1000px;
 		width: 100%;
+	}
+
+	@media (min-width: 1024px) {
+		.grid {
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		}
+
+		.grid > :global(*) {
+			max-width: none;
+		}
 	}
 </style>

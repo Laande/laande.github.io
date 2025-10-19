@@ -12,6 +12,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.string(),
     buttons: z.array(buttonSchema).optional()
   }),
 });

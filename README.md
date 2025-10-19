@@ -1,3 +1,3 @@
 Epic website
 
-Thx to @Alynva
+Thx to [@Alynva](https://github.com/alynva)

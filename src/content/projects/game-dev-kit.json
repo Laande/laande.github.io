@@ -1,0 +1,18 @@
+{
+  "title": "Game Development Kit",
+  "description": "2D game development framework with visual editor, physics system, and multiplayer support. Built with Rust and WebAssembly.",
+  "buttons": [
+    {
+      "text": "Demo",
+      "url": "https://game-dev-kit.example.com",
+      "icon": "rust",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/user/game-dev-kit",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

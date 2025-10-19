@@ -1,0 +1,18 @@
+{
+  "title": "Fitness Tracker",
+  "description": "Mobile app for tracking exercises and nutrition, with personalized analytics and progress charts. Developed with Flutter and Firebase.",
+  "buttons": [
+    {
+      "text": "Download",
+      "url": "https://fitness.example.com",
+      "icon": "flutter",
+      "variant": "primary"
+    },
+    {
+      "text": "Code",
+      "url": "https://github.com/user/fitness-app",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

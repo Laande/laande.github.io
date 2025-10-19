@@ -1,0 +1,25 @@
+---
+const { title = "My Projects" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <style>
+      body {
+        background: #0f172a;
+        color: #fff;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 3rem 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <slot/>
+  </body>
+</html>

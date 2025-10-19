@@ -1,0 +1,18 @@
+{
+  "title": "Video Conferencing App",
+  "description": "Video conferencing platform with collaboration features, screen sharing, and real-time transcription. Built with WebRTC and Go.",
+  "buttons": [
+    {
+      "text": "Try It",
+      "url": "https://video-conf.example.com",
+      "icon": "go",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/user/video-conf",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

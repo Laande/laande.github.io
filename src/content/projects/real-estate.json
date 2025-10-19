@@ -1,0 +1,18 @@
+{
+  "title": "Real Estate Platform",
+  "description": "Real estate marketplace with 3D virtual tours, advanced filters, and integrated scheduling system. Built with Django and Three.js.",
+  "buttons": [
+    {
+      "text": "Visit",
+      "url": "https://realestate.example.com",
+      "icon": "django",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/user/real-estate",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

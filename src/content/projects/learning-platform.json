@@ -1,0 +1,18 @@
+{
+  "title": "Learning Management System",
+  "description": "Educational platform with interactive courses, automated assessments, and student progress analytics. Built with Ruby on Rails and PostgreSQL.",
+  "buttons": [
+    {
+      "text": "Access",
+      "url": "https://lms.example.com",
+      "icon": "ruby",
+      "variant": "primary"
+    },
+    {
+      "text": "Code",
+      "url": "https://github.com/user/lms",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

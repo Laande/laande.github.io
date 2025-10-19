@@ -1,0 +1,18 @@
+{
+  "title": "Dev Blog Engine",
+  "description": "A developer-focused blog platform with syntax highlighting, advanced markdown support, and GitHub integration. Built with Next.js and MDX.",
+  "buttons": [
+    {
+      "text": "Demo",
+      "url": "https://dev-blog.example.com",
+      "icon": "nextdotjs",
+      "variant": "primary"
+    },
+    {
+      "text": "Code",
+      "url": "https://github.com/user/dev-blog",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

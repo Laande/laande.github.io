@@ -1,0 +1,18 @@
+{
+  "title": "Smart Home Dashboard",
+  "description": "Central interface for IoT device control, with automations, energy monitoring, and virtual assistant integration. Built with Svelte and MQTT.",
+  "buttons": [
+    {
+      "text": "Demo",
+      "url": "https://smart-home.example.com",
+      "icon": "svelte",
+      "variant": "primary"
+    },
+    {
+      "text": "GitHub",
+      "url": "https://github.com/user/smart-home",
+      "icon": "github",
+      "variant": "outline"
+    }
+  ]
+}

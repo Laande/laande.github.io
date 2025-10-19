@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+---
+
+<BaseLayout title="My Projects">
+	<h1>My Projects</h1>
+	<p class="subtitle">
+		A collection of my recent work showcasing web development, design, and
+		creative solutions.
+	</p>
+
+	<div class="grid">
+		{
+			projects.map((p) => (
+				<ProjectCard
+					title={p.data.title}
+					description={p.data.description}
+					buttons={p.data.buttons}
+				/>
+			))
+		}
+	</div>
+</BaseLayout>
+
+<style>
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 0.5rem;
+	}
+	p.subtitle {
+		color: #94a3b8;
+		text-align: center;
+		margin-bottom: 3rem;
+	}
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 1.5rem;
+		max-width: 1000px;
+		width: 100%;
+	}
+</style>

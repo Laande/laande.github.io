@@ -31,9 +31,23 @@ const sortedCategories = categoryOrder
     <meta property="og:type" content="website" />
     <title>Lande Projects</title>
     <style>
+      :root {
+        --color-bg: #0a0a0a;
+        --color-text: #e2e8f0;
+        --color-text-muted: #94a3b8;
+        --color-accent: #f59e0b;
+        --color-accent-dim: rgba(245, 158, 11, 0.05);
+        --color-card-bg: #1a1a1a;
+        --color-card-border: rgba(255, 255, 255, 0.08);
+        --color-primary: #f59e0b;
+        --color-secondary: #b33434;
+        --color-outline: #dfdfdf;
+        --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      }
+
       body {
-        background: #000000;
-        color: #fff;
+        background: var(--color-bg);
+        color: var(--color-text);
         font-family: system-ui, sans-serif;
         display: flex;
         flex-direction: column;
@@ -54,8 +68,8 @@ const sortedCategories = categoryOrder
         width: 100%;
         height: 100%;
         background-image: 
-          linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent),
-          linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent);
+          linear-gradient(0deg, transparent 24%, var(--color-accent-dim) 25%, var(--color-accent-dim) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent),
+          linear-gradient(90deg, transparent 24%, var(--color-accent-dim) 25%, var(--color-accent-dim) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent);
         background-size: 50px 50px;
         pointer-events: none;
       }
@@ -83,10 +97,10 @@ const sortedCategories = categoryOrder
         margin-bottom: 0.5rem;
         position: relative;
         z-index: 1;
-        text-shadow: 0 0 10px #00ffff;
+        text-shadow: 0 0 10px var(--color-accent);
       }
       p.subtitle {
-        color: #00ffff;
+        color: var(--color-accent);
         text-align: center;
         margin-bottom: 3rem;
         position: relative;

@@ -168,7 +168,7 @@ export function initTrailAnimation() {
           const baseSize = 180;
           const size = baseSize - (progress * baseSize * 0.33);
           
-          const color = `0, 255, 255`;
+          const color = `245, 158, 11`;
           const gradient = ctx.createRadialGradient(point.x, point.y, 0, point.x, point.y, size / 2);
           
           const baseOpacity = point.interpolated ? 0.5 * (point.opacity || 1) : 0.7;
@@ -191,9 +191,9 @@ export function initTrailAnimation() {
     
     if (isMouseOnPage && currentTrail && currentTrail.isActive) {
       const headGradient = ctx.createRadialGradient(mouseX, mouseY, 0, mouseX, mouseY, 75);
-      headGradient.addColorStop(0, 'rgba(0, 255, 255, 0.9)');
-      headGradient.addColorStop(0.4, 'rgba(0, 255, 255, 0.7)');
-      headGradient.addColorStop(1, 'rgba(0, 255, 255, 0)');
+      headGradient.addColorStop(0, 'rgba(245, 158, 11, 0.9)');
+      headGradient.addColorStop(0.4, 'rgba(245, 158, 11, 0.7)');
+      headGradient.addColorStop(1, 'rgba(245, 158, 11, 0)');
       
       ctx.fillStyle = headGradient;
       ctx.beginPath();

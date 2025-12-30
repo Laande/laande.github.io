@@ -1,5 +1,4 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import { getCollection } from "astro:content";
 
@@ -20,62 +19,132 @@ const sortedCategories = categoryOrder
 	.filter(category => projectsByCategory[category])
 	.map(category => [category, projectsByCategory[category]] as const);
 ---
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <meta property="og:title" content="Lande Projects" />
+    <meta property="og:description" content="Epic website" />
+    <meta property="og:url" content="https://laande.github.io/" />
+    <meta property="og:image" content="https://laande.github.io/favicon.png" />
+    <meta property="og:type" content="website" />
+    <title>Lande Projects</title>
+    <style>
+      body {
+        background: #000000;
+        color: #fff;
+        font-family: system-ui, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 3rem 1rem;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        position: relative;
+      }
 
-<BaseLayout title="My Projects">
-	<h1>Lande Projects</h1>
-	<p class="subtitle">
-		Stuff i've made
-	</p>
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: 
+          linear-gradient(0deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent),
+          linear-gradient(90deg, transparent 24%, rgba(0, 255, 255, 0.05) 25%, rgba(0, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 0, 255, 0.05) 75%, rgba(255, 0, 255, 0.05) 76%, transparent 77%, transparent);
+        background-size: 50px 50px;
+        pointer-events: none;
+      }
 
-	{sortedCategories.map(([category, categoryProjects]) => (
-		<div class="category-section">
-			<div class="grid">
-				{categoryProjects.map((p) => (
-					<ProjectCard
-						title={p.data.title}
-						description={p.data.description}
-						buttons={p.data.buttons}
-					/>
-				))}
-			</div>
-		</div>
-	))}
-</BaseLayout>
+      #trail-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+      }
+      
+      #trail-canvas {
+        width: 100%;
+        height: 100%;
+        filter: blur(45px);
+      }
 
-<style>
-	h1 {
-		font-size: 2.5rem;
-		font-weight: 700;
-		text-align: center;
-		margin-bottom: 0.5rem;
-	}
-	p.subtitle {
-		color: #94a3b8;
-		text-align: center;
-		margin-bottom: 3rem;
-	}
-	.category-section {
-		margin-bottom: 4rem;
-	}
-	.category-section:last-child {
-		margin-bottom: 0;
-	}
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        position: relative;
+        z-index: 1;
+        text-shadow: 0 0 10px #00ffff;
+      }
+      p.subtitle {
+        color: #00ffff;
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+        z-index: 1;
+      }
+      .category-section {
+        margin-bottom: 4rem;
+        position: relative;
+        z-index: 1;
+      }
+      .category-section:last-child {
+        margin-bottom: 0;
+      }
 
-	.grid {
-		display: grid;
-		grid-template-columns: 1fr;
-		gap: 1.5rem;
-		max-width: 1000px;
-		width: 100%;
-	}
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 1000px;
+        width: 100%;
+      }
 
-	@media (min-width: 1024px) {
-		.grid {
-			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-		}
+      @media (min-width: 1024px) {
+        .grid {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-		.grid > :global(*) {
-			max-width: none;
-		}
-	}
-</style>
+        .grid > :global(*) {
+          max-width: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="trail-container">
+      <canvas id="trail-canvas"></canvas>
+    </div>
+
+    <h1>Lande Projects</h1>
+    <p class="subtitle">Stuff i've made</p>
+
+    {sortedCategories.map(([, categoryProjects]) => (
+      <div class="category-section">
+        <div class="grid">
+          {categoryProjects.map((p) => (
+            <ProjectCard
+              title={p.data.title}
+              description={p.data.description}
+              buttons={p.data.buttons}
+            />
+          ))}
+        </div>
+      </div>
+    ))}
+
+    <script type="module" is:inline>
+      import { initTrailAnimation } from '/trail-animation.js';
+      initTrailAnimation();
+    </script>
+  </body>
+</html>

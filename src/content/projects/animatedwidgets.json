@@ -1,19 +1,19 @@
 {
-    "title": "Animated Widgets",
-    "description": "Android application that allows you to create widgets from images and animated GIFs",
-    "category": "android_app",
-    "buttons": [
-        {
-            "text": "Download",
-            "url": "https://github.com/laande/animated-widgets/releases/latest",
-            "icon": "download",
-            "variant": "primary"
-        },
-        {
-            "text": "GitHub",
-            "url": "https://github.com/Laande/animated-widgets",
-            "icon": "github",
-            "variant": "outline"
-        }
-    ]
+	"title": "Animated Widgets",
+	"description": "Android application that allows you to create widgets from images and animated GIFs",
+	"category": "android_app",
+	"buttons": [
+		{
+			"text": "Download",
+			"url": "https://github.com/laande/animated-widgets/releases/latest",
+			"icon": "download",
+			"variant": "primary"
+		},
+		{
+			"text": "GitHub",
+			"url": "https://github.com/Laande/animated-widgets",
+			"icon": "github",
+			"variant": "outline"
+		}
+	]
 }

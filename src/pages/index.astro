@@ -5,7 +5,7 @@ import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
 
-const categoryOrder = ["habtrack", "discord_bot"];
+const categoryOrder = ["habtrack", "discord_bot", "android_app"];
 
 const projectsByCategory = projects.reduce((acc, project) => {
 	const category = project.data.category;

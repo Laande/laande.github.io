@@ -1,11 +1,11 @@
 ---
-import { Icon } from 'astro-icon/components';
+import { icons } from "../icons";
 
 interface Button {
   text: string;
   url: string;
   icon?: string;
-  variant: 'primary' | 'secondary' | 'outline';
+  variant: "primary" | "secondary" | "outline";
 }
 
 interface Props {
@@ -22,21 +22,24 @@ const { title, description, buttons } = Astro.props;
     <h2>{title}</h2>
     <p>{description}</p>
   </div>
-  {buttons && <div class="buttons">
-    {buttons.map((button) => {
-      const iconName = button.icon && button.icon.includes(':') ? button.icon : `simple-icons:${button.icon}`;
-      return (
-        <a
-          href={button.url}
-          target="_blank"
-          class:list={[ button.variant || 'primary' ]}
-        >
-          {button.icon && <Icon name={iconName} size={20} />}
-          {button.text}
-        </a>
-      );
-    })}
-  </div>}
+  {
+    buttons && (
+      <div class="buttons">
+        {buttons.map((button) => (
+          <a
+            href={button.url}
+            target="_blank"
+            class:list={[button.variant || "primary"]}
+          >
+            {button.icon && icons[button.icon] && (
+              <span class="icon" set:html={icons[button.icon]} />
+            )}
+            {button.text}
+          </a>
+        ))}
+      </div>
+    )
+  }
 </div>
 
 <style>
@@ -71,6 +74,10 @@ const { title, description, buttons } = Astro.props;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+  }
+  .icon {
+    display: flex;
+    align-items: center;
   }
   .primary {
     background: #970076;

@@ -54,7 +54,7 @@ const sortedCategories = categoryOrder
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        padding: 3rem 1rem;
+        padding: 3rem 1rem 5rem;
         box-sizing: border-box;
         overflow-x: hidden;
         position: relative;
@@ -132,6 +132,19 @@ const sortedCategories = categoryOrder
           max-width: none;
         }
       }
+
+      #bmc {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+        z-index: 1000;
+        pointer-events: auto;
+        background: transparent;
+      }
     </style>
   </head>
   <body>
@@ -160,5 +173,10 @@ const sortedCategories = categoryOrder
       import { initTrailAnimation } from '/trail-animation.js';
       initTrailAnimation();
     </script>
+    <footer id="bmc">
+      <a href="https://ko-fi.com/H2H01V9IFD" target="_blank">
+        <img height="36" style="border:0;height:36px;" src="https://storage.ko-fi.com/cdn/kofi3.png?v=6" alt="Buy Me a Coffee" />
+      </a>
+    </footer>
   </body>
 </html>

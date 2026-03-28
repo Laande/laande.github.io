@@ -116,21 +116,28 @@ const sortedCategories = categoryOrder
       }
 
       .grid {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1.5rem;
         max-width: 500px;
-        width: 100%;
       }
 
-      @media (min-width: 1224px) {
+      .grid > :global(*) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+
+      @media (min-width: 900px) {
+        .grid > :global(*) {
+          flex: 0 0 500px;
+          max-width: 700px;
+        }
+      }
+
+      @media (min-width: 900px) {
         .grid {
           max-width: 1400px;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .grid > :global(*) {
-          max-width: none;
         }
       }
 

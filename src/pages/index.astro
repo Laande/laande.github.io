@@ -119,14 +119,14 @@ const sortedCategories = categoryOrder
         display: grid;
         grid-template-columns: 1fr;
         gap: 1.5rem;
-        max-width: 1000px;
+        max-width: 500px;
         width: 100%;
       }
 
-      @media (min-width: 1024px) {
+      @media (min-width: 1224px) {
         .grid {
           max-width: 1400px;
-          grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         }
 
         .grid > :global(*) {

@@ -1,0 +1,25 @@
+{
+	"title": "NoScam",
+	"description": "Discord bot that automatically detects scam images using perceptual hashing",
+	"category": "discord_bot",
+	"buttons": [
+		{
+			"text": "Discord app",
+			"url": "https://discord.com/discovery/applications/1485306239826268371",
+			"icon": "bot",
+			"variant": "primary"
+		},
+		{
+			"text": "Support Server",
+			"url": "https://discord.gg/mgpHPAKWA2",
+			"icon": "discord",
+			"variant": "secondary"
+		},
+		{
+			"text": "GitHub",
+			"url": "https://github.com/laande/noscam",
+			"icon": "github",
+			"variant": "outline"
+		}
+	]
+}

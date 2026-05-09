@@ -1,0 +1,13 @@
+{
+	"title": "Monitor Server",
+	"description": "A simple server monitoring website for local purposes",
+	"category": "website",
+	"buttons": [
+		{
+			"text": "GitHub",
+			"url": "https://github.com/Laande/monitor-server",
+			"icon": "github",
+			"variant": "outline"
+		}
+	]
+}

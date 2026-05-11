@@ -5,13 +5,13 @@
 	"buttons": [
 		{
 			"text": "Website",
-			"url": "https://hab-track.vercel.app",
+			"url": "https://habtrack.top",
 			"icon": "website",
 			"variant": "primary"
 		},
 		{
 			"text": "Discord",
-			"url": "https://hab-track.vercel.app/discord",
+			"url": "https://habtrack.top/discord",
 			"icon": "discord",
 			"variant": "secondary"
 		},

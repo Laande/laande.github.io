@@ -1,0 +1,19 @@
+{
+	"title": "Movie cards",
+	"description": "A simple website for displaying movie information and share it as image",
+	"category": "website",
+	"buttons": [
+		{
+			"text": "Website",
+			"url": "https://movie.habtrack.top",
+			"icon": "website",
+			"variant": "primary"
+		},
+		{
+			"text": "GitHub",
+			"url": "https://github.com/Laande/movie-cards",
+			"icon": "github",
+			"variant": "outline"
+		}
+	]
+}

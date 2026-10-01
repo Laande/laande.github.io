@@ -1,0 +1,19 @@
+{
+	"title": "AnyRetro",
+	"description": "Directory of habbo retro",
+	"category": "habtrack",
+	"buttons": [
+		{
+			"text": "Website",
+			"url": "https://anyretro.habtrack.top",
+			"icon": "website",
+			"variant": "primary"
+		},
+		{
+			"text": "Discord",
+			"url": "https://anyretro.habtrack.top/discord",
+			"icon": "discord",
+			"variant": "secondary"
+		}
+	]
+}
